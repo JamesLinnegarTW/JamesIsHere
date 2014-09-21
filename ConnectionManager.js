@@ -5,7 +5,7 @@ function ConnectionManager(lightRepo){
 
   function stateChangeHandler(state) {
     if (state === 'poweredOn') {
-      noble.startScanning(['2220'], true ); // allow duplicates
+      noble.startScanning(['2220']); // don't allow duplicates
       console.log('scanning');
     } else {
       lightRepo.clearAll();
